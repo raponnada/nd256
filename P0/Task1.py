@@ -10,20 +10,17 @@ with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
     for text in texts:
-        tele_ph1 = text[0].replace(' ','').replace('(','').replace(')','')
-        tele_ph2 = text[1].replace(' ','').replace('(','').replace(')','')
-        telephone_numbers.add(tele_ph1)
-        telephone_numbers.add(tele_ph2)
+        telephone_numbers.add(text[0])
+        telephone_numbers.add(text[1])
 
 
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
+    
     for call in calls:
-        tele_ph1 = call[0].replace(' ','').replace('(','').replace(')','')
-        tele_ph2 = call[2].replace(' ','').replace('(','').replace(')','')
-        telephone_numbers.add(tele_ph1)
-        telephone_numbers.add(tele_ph2)
+        telephone_numbers.add(call[0])
+        telephone_numbers.add(call[1])
 
 
 print(f"There are {len(telephone_numbers)} different telephone numbers in the records.")

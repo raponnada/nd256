@@ -2,9 +2,8 @@ TASK-0
 Worst case Big O efficieny: O(1)
 1. reading first record of texts is O(1), because by reading one line we can tell that first record is available or not. 
 
-Worst case Big O efficieny: O(n)
-2/ readinng last record of texts is O(n), because we have to go through all calls to find the last record. 
-n - number of call records
+Worst case Big O efficieny: O(1)
+reading any record from a list takes constant time i.e, O(1).
 
 
 TASK-1 
@@ -18,19 +17,18 @@ n - number of call records
 every record has to be checked to determine which phone number has longest time duration.
 
 TASK-3
-Worst case Big O efficieny: O(n + m log m)
-n - number of call records
-m - number of area codes
+Worst case Big O efficieny: O(n log n)
+
+n - number of call/text records
 
 We have to go through each and every record to collect unique area codes set. 
 If unique area codes set is in reverse lexicographic order, than worst case sorting complexity is O(m log m)
 
 
 TASK-4
-Worst case Big O efficieny: O(m + n + k log k)
-m - number of text records
-n - number of call records
-k - number of telemarketers 
+Worst case Big O efficieny: O(n log n)
+
+n - number of call/text records
 
 We have to go through each and every call and text record to collect unique phone numbers.
 If telemarketers set is in reverse lexicographic order, than worst case sorting complexity is O(k log k)
